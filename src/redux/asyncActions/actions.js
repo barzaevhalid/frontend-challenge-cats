@@ -1,0 +1,10 @@
+const apiKey = process.env.REACT_APP_API_KEY;
+
+export const getCats = () => {
+  return (dispatch) => {
+    dispatch({ type: 'FETCHING' });
+    fetch(`https://api.thecatapi.com/v1/images/search?limit=15&${apiKey}`)
+      .then((data) => data.json())
+      .then((data) => dispatch({ type: 'FETCHED', payload: data }));
+  };
+};

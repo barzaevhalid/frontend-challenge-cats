@@ -1,0 +1,25 @@
+.header {
+    background-color: #2196F3;
+    color: rgba(255, 255, 255, 0.7)
+
+}
+.container {
+    width: 1330px;
+    margin: 0 auto;
+}
+.header__menu {
+    display: flex;
+    align-items: center;
+    height: 60px;
+
+}
+.menu__item {}
+
+.link {
+    padding: 20px;
+}
+.active {
+    background: #1E88E5;
+    color: #fff;
+
+}
