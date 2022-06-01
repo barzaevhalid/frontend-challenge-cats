@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/frontend-cats-challenge" element={<Layout />}>
           <Route index element={<Main />} />
           <Route path="favorite-cats/" element={<FavoriteCats />} />
         </Route>

@@ -2,7 +2,7 @@
   "name": "cats-test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://barzaevhalid.github.io/cats-test/",
+  "homepage": "https://barzaevhalid.github.io/frontend-cats-challenge/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
