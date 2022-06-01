@@ -10,7 +10,7 @@ const Header = () => {
             <div className="header__inner">
                 <ul className='header__menu' >
                     <li className='menu__item'> 
-                       <NavLink className='link' to='/frontend-cats-challenge'>Все котики</NavLink>
+                       <NavLink className='link' to='/'>Все котики</NavLink>
                     </li>
                     <li className='menu__item'>
                       <NavLink  className='link' to='favorite-cats/'>Любимые котики</NavLink>
