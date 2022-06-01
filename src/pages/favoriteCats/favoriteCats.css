@@ -7,6 +7,8 @@
 .favoriteCats__img {
     transition: all .3s;
     cursor: pointer;
+    width: 225px;
+    height: 225px;
 
 
 }
@@ -19,12 +21,12 @@
     transition: opacity .3s;
 }
 .favoriteCats__btn {
-    opacity: 0;
-    position: absolute;
     border: none;
-    background:none ;
-    bottom: 20px;
-    transition: opacity .3s;
-    right: 20px;
-    cursor: pointer;
+    padding-bottom: 15px;
+    background: none;
+    cursor: pointer;  
+    transition: all .4s;  
+}
+.favoriteCats__btn:hover {
+    color: red;
 }

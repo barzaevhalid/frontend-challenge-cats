@@ -1,10 +1,11 @@
 
 import './content.css'
-import cat from '../../assets/cat.png'
+
 import { useState } from 'react';
 
 const Content = ({item}) => {
-    const {url} = item
+    const {url,id} = item
+
 const [favorite, setFavorite] = useState(false)
 const [favoriteActive, setFavoriteActive] = useState(false)
 
@@ -17,7 +18,10 @@ const [favoriteActive, setFavoriteActive] = useState(false)
         const onFavorite = () => {
             setFavoriteActive(!favoriteActive)
 
+
+            localStorage.setItem(id, url)
         }
+
         const like =  favoriteActive || favorite ?
         <svg 
         width="40" 
@@ -40,16 +44,18 @@ const [favoriteActive, setFavoriteActive] = useState(false)
         fill="#F24E1E"
         />
           </svg>
+
         const favoriteStyle = favorite ? {boxShadow :"0px 10px 7px 2px rgba(34, 60, 80, 0.2)",transform: "scale(1.1)"  } : null
-    return (
-        <div className='content'>
-                <div className="content__inner">
-                <img className='content__img' src={url} alt="" style={favoriteStyle}/>         
-                <button className='favorite__btn' onMouseEnter={isHovered} onMouseLeave={toggleHover} onClick={onFavorite}>
-                     {like}
-                 </button>       
-                </div>
-        </div>
+
+                return (
+                    <div className='content'>
+                            <div className="content__inner">
+                            <img className='content__img' src={url} alt="" style={favoriteStyle}/>         
+                            <button className='favorite__btn' onMouseEnter={isHovered} onMouseLeave={toggleHover} onClick={onFavorite}>
+                                {like}
+                            </button>       
+                            </div>
+                    </div>
     );
 };
 

@@ -1,7 +1,6 @@
 const initialState = {
   cats: [],
   loading: false,
-  favoriteCats: null,
 };
 
 const reducer = (state = initialState, action) => {
@@ -16,6 +15,12 @@ const reducer = (state = initialState, action) => {
         ...state,
         cats: action.payload,
         loading: false,
+      };
+    case 'FETCHING_NEW_CATS':
+      console.log(state.cats);
+      return {
+        ...state,
+        cats: [...state.cats, ...action.payload],
       };
     default:
       return state;
